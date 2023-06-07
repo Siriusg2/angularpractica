@@ -16,9 +16,15 @@ export class EmpleadoComponent implements OnInit {
   empresa = "globant";
 registrado = true;
 habilitacionCuadro = false;
+successfulRegistry = "Successful Registry";
+failureRegistry = "There is nobodie registrered";
+
+
 
 changeRegistry():void{
- this.registrado ?this.registrado =  false: this.registrado=true;}
+ this.registrado ?this.registrado =  false: this.registrado=true;
+
+}
   constructor(){
 
   }
