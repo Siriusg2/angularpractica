@@ -4,4 +4,6 @@
 <!-- <p>Edad del empleado: {{getEdad()+10}}</p> -->
 <p>Cargo del empleado: {{cargo}}</p>
 <p>Empresa: {{empresa}}</p>
-Intorudce la edad: <input type="text" (keyup)="0" #edad>
+Intorudce la edad: <input type="text" (keyup)="0" #edad [disabled]="habilitacionCuadro">
+registrado : <input type="checkbox" #registro [checked]="registrado">
+<input type="button" value="cambiar registro" (click)="changeRegistry()">

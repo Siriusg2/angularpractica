@@ -14,10 +14,11 @@ export class EmpleadoComponent implements OnInit {
 
   cargo = "backend developer";
   empresa = "globant";
+registrado = true;
+habilitacionCuadro = false;
 
-changeAge (value: string){
-
-}
+changeRegistry():void{
+ this.registrado ?this.registrado =  false: this.registrado=true;}
   constructor(){
 
   }
