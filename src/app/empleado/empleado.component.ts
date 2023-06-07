@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
 
 
 @Component({
@@ -11,7 +11,7 @@ templateUrl: './empleado.component.html',
 export class EmpleadoComponent implements OnInit {
   nombre = "gibson";
   apellido = "gil";
-edad=""
+edad="google"
 
 changeAge(event: Event){
   this.edad = (<HTMLInputElement>event.target).value;
