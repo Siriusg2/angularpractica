@@ -11,19 +11,27 @@ templateUrl: './empleado.component.html',
 export class EmpleadoComponent implements OnInit {
   nombre = "gibson";
   apellido = "gil";
+edad=""
 
+changeAge(event: Event){
+  this.edad = (<HTMLInputElement>event.target).value;
+}
   cargo = "backend developer";
   empresa = "globant";
-registrado = true;
+
 habilitacionCuadro = false;
-successfulRegistry = "Successful Registry";
-failureRegistry = "There is nobodie registrered";
+registrado = "There is nobodie registrered";
 
 
 
-changeRegistry():void{
- this.registrado ?this.registrado =  false: this.registrado=true;
 
+changeRegistry(event:Event):void{
+
+if((<HTMLInputElement>event.target).value === "si"){
+this.registrado = "Succed Registred"
+}else{
+  this.registrado = "There is nobodie registrered";
+}
 }
   constructor(){
 

@@ -1,16 +1,19 @@
 <p>Nombre del empleado: {{nombre}}</p>
 <p>Apellido del empleado: {{apellido}}</p>
-<p>Edad del empleado: {{edad.value }}</p>
+<p>Edad del empleado: {{edad}}</p>
 <!-- <p>Edad del empleado: {{getEdad()+10}}</p> -->
 <p>Cargo del empleado: {{cargo}}</p>
 <p>Empresa: {{empresa}}</p>
 <br>
 <br>
-Intorudce la edad: <input type="text" (keyup)="0" #edad [disabled]="habilitacionCuadro">
-<p>{{registrado ? successfulRegistry : failureRegistry}}</p>
+<!-- Intorudce la edad: <input type="text" (keyup)="0" #edad [disabled]="habilitacionCuadro"> -->
+Intorudce la edad: <input type="text" (input)="changeAge($event)">
+<p>{{registrado}}</p>
 <br>
 <br>
-registrado : <input type="checkbox" #registro [checked]="registrado" (click)="changeRegistry()">
+Registrado : <input type="radio" name="nregistro" value="si" #registro (click)="changeRegistry($event)">
 <br>
 <br>
-<input type="button" value="cambiar registro" (click)="changeRegistry()">
+No registrado : <input type="radio" name="nregistro" value="no" #registro (click)="changeRegistry($event)">
+<br>
+<br>
